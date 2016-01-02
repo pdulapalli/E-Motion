@@ -1,0 +1,119 @@
+Divider = R2/(R1+R2)
+        = (75.9 Ohm)/(75.9 Ohm + 98.44 kOhm)
+        = 0.00077043401091
+
+Vstart = V_fg*Divider
+        = 20m*Divider
+        = 15.409 uV
+
+Theoretical G1: 10.30 Ohm => 4,797
+Actual Vout1 = 74.0 mV
+
+Theoretical G2: 0.   kOhm => 51.07
+Actual Vout2 = 1.74 V
+
+Expected G1*G2: 52,799
+
+Actual G1*G2:
+
+//New Microvolt Attempt Function Generator
+
+Channel 1 Divider = R2/(R1+R2)
+        = (2.8836 kOhm)/(2.8836 kOhm + 3377 kOhm)
+        = 0.00085316547589
+
+Vchannel1 = V_fg*Divider
+        = 20m*Divider
+        = 17.06330952 uV
+
+Conversion approx:
+    17 uV ~ 20 mV
+
+Channel 2 Divider = R2/(R1+R2)
+        = (2.966 kOhm)/(2.966 kOhm + 3306 kOhm)
+        = 0.00089635251618
+
+Vchannel2 = V_fg*Divider
+        = 20m*Divider
+        = 17.92705032 uV
+
+//BACKUP CONFIGURATION
+
+IMPORTANT NOTE: Left hand circuit was about 80-100 mV larger at final output stage than Right hand circuit
+
+(a)
+With FunctionCh1 - FunctionCh2 = 30.0 - 25.0 mVpp = 5 mVpp
+f = 100 Hz
+
+checklist:
+
+channel right
+-a1: capture 11
+-a2: capture 12
+-rect: capture 13
+-smooth: capture 14
+
+(b)
+
+With FunctionCh1 - FunctionCh2 = 35.0 - 25.0 mVpp = 10 mVpp
+f = 100 Hz
+
+checklist:
+
+channel right
+-a1: capture 15
+-a2: capture 16
+-rect: capture 17
+-smooth: capture 18
+
+(c)
+
+With FunctionCh1 - FunctionCh2 = 40.0 - 25.0 mVpp = 15 mVpp
+f = 100 Hz
+
+checklist:
+
+channel right
+-a1: capture 19
+-a2: capture 20
+-rect: capture 21
+-smooth: capture 22
+
+(d)
+
+With FunctionCh1 - FunctionCh2 = 40.0 - 25.0 mVpp = 15 mVpp
+f = 50 Hz
+
+checklist:
+
+channel right
+-a1: capture 23
+-a2: capture 24
+-rect: capture 25
+-smooth: capture 26
+
+(e)
+
+With FunctionCh1 - FunctionCh2 = 40.0 - 25.0 mVpp = 10 mVpp
+f = 50 Hz
+
+checklist:
+
+channel right
+-a1: capture 27
+-a2: capture 28
+-rect: capture 29
+-smooth: capture 30
+
+(f)
+
+With FunctionCh1 - FunctionCh2 = 40.0 - 25.0 mVpp = 5 mVpp
+f = 50 Hz
+
+checklist:
+
+channel right
+-a1: capture 31
+-a2: capture 32
+-rect: capture 33
+-smooth: capture 34
